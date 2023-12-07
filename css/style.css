@@ -499,3 +499,46 @@ img{
 }
 
 /* video end */
+
+/* footer start */
+
+.footer{
+  background: #0E1D28;
+  padding: 119px 0;
+}
+
+.footer__item{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer_logo{
+  width: 50%;
+}
+
+.footer__nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.footer__menu-link{
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.footer__menu-link:hover, .footer__menu-link:focus, .footer__menu-link:active{
+  opacity: 0.75;
+}
+
+.footer__menu-title{
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+/* footer end */
