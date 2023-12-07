@@ -231,7 +231,6 @@ img{
   padding-right: 59px;
   color: #006DFE;
   font-size: 16px;
-  font-weight: 400;
   line-height: 24px;
   text-decoration: none;
   background: url(../img/svg/arrow-ico.svg) no-repeat 95% center;
@@ -250,7 +249,7 @@ img{
 }
 .places__caption{
   display: flex;
-  text-wrap: wrap;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 36px;
@@ -276,13 +275,14 @@ img{
 .places__card{
   position: relative;
   overflow: hidden;
+  
 }
 .places__card::after{
   display: block;
   content: '';
   width: 100%;
   height: 100%; /* TODO: Разобраться что тут не так, должно быть 100*/
-  background-color: rgba(21, 24, 36, 0.40);
+  background-color: rgba(21, 24, 36, 0.4);
   position: absolute;
   top: 0;
   left: 0;
@@ -311,13 +311,14 @@ img{
 .places__card-pic{
   width: 100%;
   transition-duration: 150ms;
+  transform: scale(1.02); /* фикс картинок костылём*/
 }
 .places__card-pic_size_lg{
   height: 354px;
   object-fit: cover;
 }
-.places__card-pic_size_lg{
-  height: 283;
+.places__card-pic_size_sm{
+  height: 283px;
   object-fit: cover;
 }
 .places__card-link{ /* Ну какого хрена эти картинки багуются??? */
@@ -329,3 +330,140 @@ img{
   z-index: 4;
 }
 /* Places styles end */
+
+/* Tours styles start */
+
+.tours{
+  margin-bottom: 139px;
+}
+
+.tours__tour{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0 108px;
+  align-items: center;
+  margin-bottom: 77px;
+}
+
+.tour__info{
+  padding-left: 47px;
+}
+
+.tour__title{
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 85px;
+}
+
+.tour__desc{
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 58px;
+}
+
+.tour__more{
+    font-size: 16px;
+    color: #006DFE;
+    text-decoration: none;
+    padding-right: 59px;
+    background: url(../img/svg/arrow-ico.svg) no-repeat right center;
+}
+
+.tour__more:hover, .tour__more:focus{
+  opacity: .65;
+}
+/* Tours styles end */
+
+/* Top to visit start */
+
+.top{
+  margin-left: 85px;
+  margin-bottom: 86px;
+}
+
+.top__title{
+  margin-bottom: 54px;
+}
+
+.top__cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 57px;
+}
+
+.top__card{
+  display: flex;
+  flex-direction: column;
+}
+.top__card-pic{
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.top__card-stats {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background: rgba(21, 24, 36, 0.6);
+    padding: 16px 25px;
+}
+
+.top__card-title{
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px; /* 133.333% */
+  margin: 0 auto 0 0;
+}
+
+.top__card-likes{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: white;
+  padding-right: 20px;
+  background: url(../img/svg/like.svg) no-repeat right;
+  margin-right: 14px;
+}
+
+.top__card-comments{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: white;
+  padding-right: 23px;
+  background: url(../img/svg/comment.svg) no-repeat right;
+}
+
+.top__card-desc{
+  color: #102746;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  margin-bottom: 31px;
+}
+
+.top__card-more{
+  padding: 12px 19px;
+  width: 118px;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+  background-color: #1B7DFF;
+  border: 0;
+  transition-duration: 100ms;
+  margin: auto 0 0 0;
+}
+
+.top__card-more:hover, .top__card-more:focus, .top__card-more:active{
+  background-color: #0e66da;
+}
+
+/* Top to visit end */
